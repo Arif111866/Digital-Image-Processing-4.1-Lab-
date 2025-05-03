@@ -11,6 +11,7 @@ def image_enhancement(image, x , y , value):
                 image[i][j] = max(image[i][j]+40 , 255)
     return image
 
+
 image = cv2.imread("./Fractured Spine 746x976.tif", 0)
 plt.subplot(2,1,1)
 plt.imshow(image, cmap="gray")
