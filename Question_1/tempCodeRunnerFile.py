@@ -1,0 +1,1 @@
+image = cv2.imread("./Rose 1024x1024.tif" , cv2.IMREAD_GRAYSCALE)
