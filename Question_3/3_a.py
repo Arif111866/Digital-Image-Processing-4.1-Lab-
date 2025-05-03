@@ -38,6 +38,7 @@ plt.subplot(2,3, 3)
 plt.imshow(pcb_image, cmap='gray')
 plt.title('PCB Image with noise')
 
+
 def avg_filter(image, kernel_size):
     new_image = image.copy()
     hight = image.shape[0]
