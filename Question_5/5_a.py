@@ -89,6 +89,7 @@ def roberts_edge_detection(image):
 
 
 sobel_edge = sobel_edge_detection(original_image)
+
 prewitt_edge = prewitt_edge_detection(original_image)
 roberts_edge = roberts_edge_detection(original_image)
 
