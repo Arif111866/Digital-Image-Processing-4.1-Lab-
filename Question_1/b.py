@@ -12,6 +12,7 @@ def image_decress(image, bit):
             new_image[i][j] = round(image[i][j] / step) * step
     return new_image.astype(np.uint8)  # Convert to uint8
 
+
 image = cv2.imread("./Skull 374x452.tif", 0)
 # image = cv2.imread("./Rose 1024x1024.tif" , cv2.IMREAD_GRAYSCALE)
 image = cv2.resize(image, (512, 512))
