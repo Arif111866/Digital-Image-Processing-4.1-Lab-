@@ -21,8 +21,7 @@ def harmonic_mean_filter(image, karnel_size):
             for x in range(-offset, offset + 1):
                 for y in range(-offset, offset + 1):
                     if (i + x >= 0 and i + x < hight) and (j + y >= 0 and j + y < widht):
-                        if(image[i+x][j+y]):
-                            sum += float(1/image[i+x][j+y])
+                        sum += float(1/image[i+x][j+y]+1e-4)
             if(sum):
                 new_image[i][j] = min(255, (karnel_size*karnel_size/sum))
             else:
