@@ -1,111 +1,102 @@
-🎨 Digital Image Processing Laboratory 4.1 🚀
+# 🖼️ Digital Image Processing Laboratory - CSE 4.1
 
-Welcome to my Digital Image Processing Lab 4.1 repository! This repo contains solutions to various image processing tasks as part of my lab exercises. Below are the questions and a brief overview of my approach to solving them. 🌟
+This repository contains the implementation of fundamental Digital Image Processing (DIP) techniques using Python (OpenCV, NumPy, Matplotlib). Each task corresponds to a specific lab experiment. The main focus is on image enhancement, restoration, segmentation, filtering, and morphological operations.
 
-📋 Lab Questions and Solutions
+📁 Repository Structure:
+- `Lab1/` to `Lab6/`: Contains respective experiments, code files, outputs, and image resources.
+- Each folder includes clean and well-documented Python notebooks or scripts.
 
-1. Grayscale Image of Size 512x512
+---
 
+## ✅ Lab 1: Image Resolution & Histogram-Based Segmentation
+**Dataset**: Grayscale image of size `512x512`
 
+- 🔹 (a) **Spatial Resolution Reduction**: Reduced image resolution by half (subsampling).
+- 🔹 (b) **Display Analysis**: Displayed low-resolution image in original window to observe scaling effect.
+- 🔹 (c) **Intensity Resolution Decrease**: Reduced bit-depth from 8-bit to 1-bit, observing gradual degradation.
+- 🔹 (d) **Histogram & Thresholding**: Plotted image histogram and applied global threshold-based segmentation.
 
+📂 `Lab1/` → [`lab1.ipynb`](./Lab1/lab1.ipynb)
 
+---
 
-Tasks: Decrease its spatial resolution by half, observe changes, convert to binary format, and analyze histogram.
+## ✅ Lab 2: Brightness, Power Transform & Bit-Plane Analysis
 
+- 🔹 (a) **Brightness Enhancement**: Enhanced brightness for specific gray levels using piecewise transformation.
+- 🔹 (b) **Power vs Inverse Log Transform**: Compared effects of gamma correction (power law) vs. inverse log scaling.
+- 🔹 (c) **Bit-plane Slicing**: Reconstructed image using MSBs and calculated the difference with the original image.
 
+📂 `Lab2/` → [`lab2.ipynb`](./Lab2/lab2.ipynb)
 
-Approach: Used Python with OpenCV to resize the image, applied thresholding for binary conversion, and plotted histograms using Matplotlib. 📉
+---
 
-2. Grayscale Image Enhancement
+## ✅ Lab 3: Noise Removal using Spatial Filtering
 
+- 🔹 (a) **Salt & Pepper Noise Removal**: Applied 5×5 average and median filters and evaluated PSNR.
+- 🔹 (b) **Mask Size Variation**: Tested average filter with 3×3, 5×5, and 7×7 masks, compared PSNR.
+- 🔹 (c) **Mean Filters**: Applied harmonic and geometric mean filters and compared with previous methods.
 
+📂 `Lab3/` → [`lab3.ipynb`](./Lab3/lab3.ipynb)
 
+---
 
+## ✅ Lab 4: Frequency Domain Filtering & Edge Detection
 
-Tasks: Perform brightness enhancement, power law, and logarithmic transforms.
+- 🔹 (a) **Gaussian vs Butterworth LPF**: Added Gaussian noise and applied both filters; analyzed performance quantitatively.
+- 🔹 (b) **Ideal LPF & Ringing**: Demonstrated ringing effect with varying cutoff frequencies (D₀).
+- 🔹 (c) **HPF Edge Detection**: Performed edge detection using ideal and Gaussian HPFs on both clean and noisy images.
 
+📂 `Lab4/` → [`lab4.ipynb`](./Lab4/lab4.ipynb)
 
+---
 
-Approach: Implemented enhancement functions in OpenCV, applied different gamma values for power law, and compared results visually. ✨
+## ✅ Lab 5: Segmentation & Edge Detection
 
-3. Grayscale Image with Salt & Pepper Noise
+- 🔹 (a) **Spatial Edge Detection**: Compared Sobel, Prewitt, Roberts, and Canny edge detectors.
+- 🔹 (b) **Gray Level Segmentation**: Illustrated segmentation based on histogram peaks.
+- 🔹 (c) **Global Thresholding**: Applied basic thresholding using Otsu's method.
+- 🔹 (d) **Adaptive Thresholding**: Demonstrated segmentation using adaptive techniques (mean & Gaussian).
 
+📂 `Lab5/` → [`lab5.ipynb`](./Lab5/lab5.ipynb)
 
+---
 
+## ✅ Lab 6: Morphological Operations
 
+- 🔹 (a) **Erosion & Dilation**: Applied basic morphological shrinking and expanding.
+- 🔹 (b) **Opening & Closing**: Used for noise removal and small object bridging.
+- 🔹 (c) **Boundary Extraction**: Extracted image boundaries using morphological gradient.
+- 🔹 (d) **Region Filling**: Implemented morphological filling for binary regions.
 
-Tasks: Apply median and spatial filters (5x5 mask) with varying sizes (3x3, 5x5, 7x7) and compare PSNR.
+📂 `Lab6/` → [`lab6.ipynb`](./Lab6/lab6.ipynb)
 
+---
 
+## 🔧 Technologies Used
+- Python 3.8+
+- OpenCV
+- NumPy
+- Matplotlib
+- Jupyter Notebook
 
-Approach: Added noise using NumPy, applied filters with OpenCV, and calculated PSNR for performance evaluation. 🔍
+---
 
-4. Grayscale Image with Gaussian Noise
+## 📸 Sample Visuals
+<p float="left">
+  <img src="Lab1/output1.png" width="30%" />
+  <img src="Lab3/median_vs_avg.png" width="30%" />
+  <img src="Lab5/segmentation.png" width="30%" />
+</p>
 
+---
 
+## 🧠 Author
+**Ariful Islam**  
+🎓 CSE, Rajshahi University  
+🔗 [GitHub Profile](https://github.com/Arif111866)  
+📌 [Portfolio Site](https://arif111866.github.io)
 
+---
 
-
-Tasks: Apply 4th order Butterworth and Gaussian low-pass filters, perform edge detection.
-
-
-
-Approach: Used SciPy for filter design, applied filters, and implemented edge detection with Canny edge detector. 🛠️
-
-5. Grayscale Image Edge Detection
-
-
-
-
-
-Tasks: Compare edge detection algorithms, segment using gray level, and demonstrate adaptive thresholding.
-
-
-
-Approach: Implemented Sobel and Canny edge detectors, used Otsu’s method for segmentation, and applied adaptive thresholding. 🎯
-
-6. Binary Image with Structuring Element
-
-
-
-
-
-Tasks: Perform erosion, dilation, opening, closing, boundary extraction, and region filling.
-
-
-
-Approach: Utilized morphological operations in OpenCV with custom structuring elements for each task. 🖌️
-
-🌐 Usage
-
-Clone the repo and run the Python scripts with the required dependencies (OpenCV, NumPy, Matplotlib, SciPy). Ensure you have the input images in the working directory. 📂
-
-📚 Dependencies
-
-
-
-
-
-OpenCV
-
-
-
-NumPy
-
-
-
-Matplotlib
-
-
-
-SciPy
-
-Install them using: pip install opencv-python numpy matplotlib scipy
-
-🚀 Contribution
-
-Feel free to fork, improve, or suggest enhancements! Open an issue or pull request. 🙌
-
-🎉 Acknowledgments
-
-Thanks to my lab instructor and online resources for guidance! 🌐
+## 📜 License
+This repository is open-sourced under the MIT License.
