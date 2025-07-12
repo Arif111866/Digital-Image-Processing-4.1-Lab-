@@ -83,9 +83,9 @@ This repository contains the implementation of fundamental Digital Image Process
 
 ## 📸 Sample Visuals
 <p float="left">
-  <img src="Lab1/output1.png" width="30%" />
-  <img src="Lab3/median_vs_avg.png" width="30%" />
-  <img src="Lab5/segmentation.png" width="30%" />
+  <img src="Question_1/Rose 1024x1024.tif" width="30%" />
+  <img src="Question_2/Aerial Image 765x769.tif" width="30%" />
+  <img src="Question_3/Noisy PCB 455x440.tif" width="30%" />
 </p>
 
 ---
